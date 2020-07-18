@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Addition">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:backgroundTint="#2196F3"
+            android:onClick="begin"
+            android:text="PLAY AGAIN"
+            android:textColor="#F50B02"
+            android:textSize="50sp"
+            tools:ignore="NotSibling" />
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-9738106405881817/6354365294 ">
+        </com.google.android.gms.ads.AdView>
+
+
+        <TextView
+            android:id="@+id/points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_above="@id/button1"
+            android:layout_marginBottom="15dp"
+            android:background="#FFA500"
+
+            android:text="00"
+            android:textSize="40sp"
+            tools:ignore="NotSibling"
+            android:layout_alignParentEnd="true" />
+        <TextView
+            android:id="@+id/hiScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_above="@id/button0"
+
+            android:background="#E91E63"
+
+            android:text="Best:500"
+            android:textSize="30sp"
+            tools:ignore="NotSibling"
+            android:layout_alignParentStart="true" />
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sumView"
+
+            >
+
+            <Button
+                android:id="@+id/button0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="#FF444EFF"
+                android:onClick="chooseanswer"
+                android:tag="0"
+                android:text="3"
+                android:textSize="100sp"
+
+                />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="#009688"
+                android:onClick="chooseanswer"
+                android:tag="1"
+                android:text="3"
+                android:textSize="100sp"
+
+                />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="#E91E63"
+                android:onClick="chooseanswer"
+                android:tag="2"
+                android:text="3"
+                android:textSize="100sp"
+
+                />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:backgroundTint="#FF5722"
+                android:onClick="chooseanswer"
+                android:tag="3"
+                android:text="3"
+                android:textSize="100sp" />
+
+
+            />
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textSize="60sp" />
+
+        <TextView
+            android:id="@+id/sumView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="15dp"
+            android:text="31+22"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+    </RelativeLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#06FC10"
+        android:onClick="begin"
+        android:shadowColor="#FFFFFF"
+        android:text="GO!"
+        android:textSize="150dp"
+        android:visibility="invisible" />
+
+    <ProgressBar
+        android:id="@+id/spinnerTimer"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="150dp"
+        android:layout_height="145dp"
+        android:layout_below="@id/button"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="false"
+        android:indeterminateBehavior="cycle"
+        android:max="30"
+        android:progressDrawable="@drawable/circle"
+        android:progress="30" />
+
+
+
+
+</RelativeLayout>

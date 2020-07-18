@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Basic Arithmetic</string>
+    <string name="game_instructions">Select a basic operation and lets have some fun!</string>
+    <string name="game_title">Basic Arithmetics</string>
+    <string name="best">Best:</string>
+    <string name="time_up">Time Up!</string>
+    <string name="great">Great!</string>
+    <string name="awesome">Awesome!</string>
+    <string name="nice">Nice!</string>
+    <string name="sorry">Sorry!</string>
+    <string name="nope">Nope!</string>
+    <string name="wrong">Wrong!</string>
+</resources>
